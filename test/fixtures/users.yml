@@ -1,0 +1,11 @@
+one:
+  name: MyString
+  slogan: MyString
+  email: MyString
+  hashed_password: MyString
+
+two:
+  name: MyString
+  slogan: MyString
+  email: MyString
+  hashed_password: MyString
