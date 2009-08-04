@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_filter :auth
+
   def new
     @user = User.new
   end
@@ -6,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:notice] = "Successfully created user."
+      flash[:notice] = "bra där!"
       redirect_to root_url
     else
       render :action => 'new'
@@ -20,7 +22,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      flash[:notice] = "Successfully updated user."
+      flash[:notice] = "bra där!"
       redirect_to root_url
     else
       render :action => 'edit'

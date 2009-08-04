@@ -1,0 +1,14 @@
+<h1>och vem är du egentligen?</h1>
+
+<% form_for @user_session do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label 'namn' %><br />
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label 'lösen' %><br />
+    <%= f.password_field :password %>
+  </p>
+  <p><%= f.submit "ding!" %></p>
+<% end %>

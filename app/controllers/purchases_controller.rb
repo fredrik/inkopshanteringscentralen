@@ -1,4 +1,6 @@
 class PurchasesController < ApplicationController
+  before_filter :auth
+
   # GET /purchases
   # GET /purchases.xml
   def index
@@ -41,6 +43,7 @@ class PurchasesController < ApplicationController
   # POST /purchases.xml
   def create
     @purchase = Purchase.new(params[:purchase])
+    @purchase.purchaser = current_user.username
 
     respond_to do |format|
       if @purchase.save
