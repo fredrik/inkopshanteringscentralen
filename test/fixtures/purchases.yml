@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  purchaser: MyString
+  purchase_date: 2009-08-04 20:00:50
+  amount: 1
+  store: MyString
+  description: MyText
+
+two:
+  purchaser: MyString
+  purchase_date: 2009-08-04 20:00:50
+  amount: 1
+  store: MyString
+  description: MyText
