@@ -9,8 +9,6 @@
     <th>Datum</th>
     <td>&nbsp;</td>
     <th>Kostnad</th>
-    <th>Affär</th>
-    <th>Varudeklaration</th>
   </tr>
 
 <% @purchases.each do |purchase| %>
@@ -19,8 +17,6 @@
     <td><%=h purchase.purchase_date_formatted %></td>
     <td>&nbsp;</td>
     <td><%=h purchase.amount %></td>
-    <td><%=h purchase.store %></td>
-    <td><%=h purchase.description %></td>
     <td>&nbsp;[</td>
     <td><%= link_to 'DETALJERNA, TACK.', purchase %></td>
     <td><%= link_to 'Ändra', edit_purchase_path(purchase) %></td>

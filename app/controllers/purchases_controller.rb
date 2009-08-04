@@ -44,7 +44,7 @@ class PurchasesController < ApplicationController
 
     respond_to do |format|
       if @purchase.save
-        flash[:notice] = 'Purchase was successfully created.'
+        flash[:notice] = 'Bra där!'
         format.html { redirect_to(@purchase) }
         format.xml  { render :xml => @purchase, :status => :created, :location => @purchase }
       else
@@ -61,7 +61,7 @@ class PurchasesController < ApplicationController
 
     respond_to do |format|
       if @purchase.update_attributes(params[:purchase])
-        flash[:notice] = 'Purchase was successfully updated.'
+        flash[:notice] = 'Bra där!'
         format.html { redirect_to(@purchase) }
         format.xml  { head :ok }
       else
