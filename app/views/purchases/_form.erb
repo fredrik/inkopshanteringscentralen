@@ -1,0 +1,28 @@
+<% form_for(@purchase) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label 'inköpare' %><br />
+    <%= f.text_field :purchaser %>
+  </p>
+  <p>
+    <%= f.label 'köpeskilling (i svenska dollars)' %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.label 'inköpsdatum' %><br />
+    <%= f.date_select :purchase_date %>
+  </p>
+  <br />
+  <p>
+    <%= f.label 'affär' %><br />
+    <%= f.text_field :store %>
+  </p>
+  <p>
+    <%= f.label 'varudeklaration (var precis så otydlig som nöden kräver)' %><br />
+    <%= f.text_area :description, :rows => 8, :cols => 48 %>
+  </p>
+  <p>
+    <%= f.submit 'Presto!' %>
+  </p>
+<% end %>

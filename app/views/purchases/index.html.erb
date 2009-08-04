@@ -1,28 +1,34 @@
-<h1>Listing purchases</h1>
+<h1>Här är alla inköp, dårå.</h1>
+
+<h2><%= link_to 'Nytt inköp', new_purchase_path %></h2>
+<br />
 
 <table>
   <tr>
-    <th>Purchaser</th>
-    <th>Purchase date</th>
-    <th>Amount</th>
-    <th>Store</th>
-    <th>Description</th>
+    <th>Du eller jag</th>
+    <th>Datum</th>
+    <td>&nbsp;</td>
+    <th>Kostnad</th>
+    <th>Affär</th>
+    <th>Varudeklaration</th>
   </tr>
 
 <% @purchases.each do |purchase| %>
   <tr>
     <td><%=h purchase.purchaser %></td>
-    <td><%=h purchase.purchase_date %></td>
+    <td><%=h purchase.purchase_date_formatted %></td>
+    <td>&nbsp;</td>
     <td><%=h purchase.amount %></td>
     <td><%=h purchase.store %></td>
     <td><%=h purchase.description %></td>
-    <td><%= link_to 'Show', purchase %></td>
-    <td><%= link_to 'Edit', edit_purchase_path(purchase) %></td>
-    <td><%= link_to 'Destroy', purchase, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td>&nbsp;[</td>
+    <td><%= link_to 'DETALJERNA, TACK.', purchase %></td>
+    <td><%= link_to 'Ändra', edit_purchase_path(purchase) %></td>
+    <td><%= link_to 'Ta bort', purchase, :confirm => 'Neeej, säkerligen inte?', :method => :delete %></td>
+    <td>&nbsp;]</td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New purchase', new_purchase_path %>

@@ -1,28 +1,28 @@
 <p>
-  <b>Purchaser:</b>
+  <b>Inköpare:</b>
   <%=h @purchase.purchaser %>
 </p>
 
 <p>
-  <b>Purchase date:</b>
-  <%=h @purchase.purchase_date %>
+  <b>Datum:</b>
+  <%=h @purchase.purchase_date_formatted %>
 </p>
 
 <p>
-  <b>Amount:</b>
+  <b>Kostnad:</b>
   <%=h @purchase.amount %>
 </p>
 
 <p>
-  <b>Store:</b>
+  <b>Affär:</b>
   <%=h @purchase.store %>
 </p>
 
 <p>
-  <b>Description:</b>
+  <b>Varudeklaration:</b>
   <%=h @purchase.description %>
 </p>
 
 
-<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
-<%= link_to 'Back', purchases_path %>
+<%= link_to 'Ändra', edit_purchase_path(@purchase) %> |
+<%= link_to 'Tillbaka till listan', purchases_path %>
