@@ -1,0 +1,28 @@
+<p>
+  <b>Purchaser:</b>
+  <%=h @purchase.purchaser %>
+</p>
+
+<p>
+  <b>Purchase date:</b>
+  <%=h @purchase.purchase_date %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @purchase.amount %>
+</p>
+
+<p>
+  <b>Store:</b>
+  <%=h @purchase.store %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @purchase.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>
